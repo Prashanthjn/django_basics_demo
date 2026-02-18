@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home page</title>
 </head>
 <body>
-    <h1>this is the </h1>
+    <h1>this is the main index page </h1>
+    <h2>your lucky number is- {{lucky_number }}</h2>
+
+    <ul>
+        {{% for vegetable in vegetables %}}
+       <li> {{vegetable}}</li>
+    </ul>
 <p>
-    <a href="{%url 'about' %}">go to about from here</a>
-    <a href="{%url 'contact' %}">go to contact page from here </a>
+    <a href="{% url 'about' %}">about</a>
+    <a href="{%url 'contact' %}"> contact  </a>
 </p>
 </body>
 </html>
